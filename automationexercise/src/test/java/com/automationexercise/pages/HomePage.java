@@ -1,5 +1,7 @@
 package com.automationexercise.pages;
 
+import java.lang.annotation.ElementType;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.bidi.browsingcontext.Locator;
 import org.testng.Assert;
@@ -77,6 +79,26 @@ public class HomePage extends TestNGHooks{
 		click(locateElement(Locators.XPATH, "//a[contains(text(),'Cart')]"));
 		return new ViewCartPage();
 	}
+	
+	public HomePage verifyLeftSidebar(String CategoryHeader) {
+		String cat = getElementText(locateElement(Locators.XPATH, "//div[@class='left-sidebar']/h2"));
+		Assert.assertEquals(cat, CategoryHeader);
+		return this;
+	}
+	
+	public HomePage clickCategory(String requiredCategory) {
+		click(locateElement(Locators.XPATH, "//a[@href='#"+requiredCategory+"']"));
+		return this;
+	}
+	public ProductsPage clickDressinWoman() {
+		
+		WebElement dress = locateElement(Locators.XPATH, "//a[contains(text(),'Dress')]");
+		wait.waitUntilElementClickable(dress);
+		click(dress);
+		return new ProductsPage();
+	}
+	
+	
 
 
 

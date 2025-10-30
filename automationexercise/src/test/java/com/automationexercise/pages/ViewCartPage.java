@@ -86,5 +86,10 @@ public class ViewCartPage extends TestNGHooks{
 		click(locateElement(Locators.XPATH, "//table[@id='cart_info_table']//tr[td//a[text()='"+ firstReqProduct +"']]//td[6]"));
 		return this;
 	}
+	
+	public SignupLoginPage clickSignupLogin() {
+		click(locateElement(Locators.XPATH, "//a[text()=' Signup / Login']"));
+		return new SignupLoginPage();
+	}
 
 }

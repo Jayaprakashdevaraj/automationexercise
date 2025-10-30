@@ -19,6 +19,12 @@ public class ProductsPage extends TestNGHooks{
 		wait = new WaitConditions(getDriver());
 	}
 
+	public ProductsPage verifyTitle() {
+		String title = getElementText(locateElement(Locators.XPATH, "//h2[@class='title text-center']"));
+		System.out.println(title);
+		return this;
+	}
+	
 	public ProductsPage verifyAllProducts() {
 		
 		String allProducts = getElementText(locateElement(Locators.XPATH, "//h2[text()='All Products']"));
@@ -88,6 +94,27 @@ public class ProductsPage extends TestNGHooks{
          return new ViewCartPage();
 	}
 	
+	public ProductsPage clickCategory(String requiredCategory2) {
+		click(locateElement(Locators.XPATH, "//a[@href='#"+requiredCategory2+"']"));
+		return this;
+	}
 	
+	public ProductsPage clickJeansinMen() {
+		WebElement jeans = locateElement(Locators.XPATH, "//a[contains(text(),'Jeans')]");
+		wait.waitUntilElementClickable(jeans);
+		click(jeans);
+		return this;
+	}
+	
+	public ProductsPage verifyBrands() {
+		String elementText = getElementText(locateElement(Locators.XPATH, "//div[@class='brands_products']/h2"));
+		System.out.println(elementText);
+		return this;
+	}
+	
+	public ProductsPage selectBrand(String BrandName) {
+		click(locateElement(Locators.XPATH, "//div[@class='brands-name']//a[text()='"+BrandName+"']"));	
+		return this;
+	}
 	
 }

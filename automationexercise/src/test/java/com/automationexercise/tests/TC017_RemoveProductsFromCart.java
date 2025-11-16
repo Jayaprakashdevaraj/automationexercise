@@ -18,7 +18,7 @@ public class TC017_RemoveProductsFromCart extends TestNGHooks{
 	public void verifyQuandity(String firstReqProduct) {
 		new HomePage().verifyPage()
 		.clickProduct()
-		.selectProduct(firstReqProduct)
+		.clickViewProduct(firstReqProduct)
 		.getProductName(firstReqProduct)
 		.clickAddToCart()
 		.clickViewCart()

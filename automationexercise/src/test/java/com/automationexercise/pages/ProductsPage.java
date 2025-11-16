@@ -42,7 +42,7 @@ public class ProductsPage extends TestNGHooks{
 	}
 	
 
-	public ProductDetailsPage selectProduct(String reqProduct) {
+	public ProductDetailsPage clickViewProduct(String reqProduct) {
 		click(locateElement(Locators.XPATH, "//p[contains(text(),'"+reqProduct+"')]/ancestor::div[@class='productinfo text-center']/following::div//a[contains(text(),'View Product')]"));
 		return new ProductDetailsPage();
 	}

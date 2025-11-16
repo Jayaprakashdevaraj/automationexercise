@@ -21,7 +21,7 @@ public class TC014_PlaceOrderRegisterWhileCheckout  extends TestNGHooks{
 		new HomePage()
 		.verifyPage()
 		.clickProduct()
-		.selectProduct(firstReqProduct)
+		.clickViewProduct(firstReqProduct)
 		.getProductName(firstReqProduct)
 		.clickAddToCart()
 		.clickViewCart()

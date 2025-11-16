@@ -5,6 +5,7 @@ import static com.automationexercise.general.utils.LoggerUtility.*;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -37,7 +38,15 @@ public class SeleniumBase extends DriverManager implements Browser, Element {
 		jsExecutor.executeScript(jsExpression, ele);
 		pass("Successfully clicked on the given "+ele+" webelement in the DOM.");
 	}
-
+	
+	
+	@Override
+	public void scrollToElement(WebElement ele) {
+	JavascriptExecutor js = (JavascriptExecutor) getDriver();
+	js.executeScript("arguments[0].scrollIntoView(true);", ele);
+	}
+	
+	
 	@Override
 	public void type(WebElement ele, String data) {
 		ele.sendKeys(data);
@@ -192,6 +201,12 @@ public class SeleniumBase extends DriverManager implements Browser, Element {
 		Actions action = new Actions(getDriver());
 		action.moveToElement(ele).click().perform();
 		
+	}
+
+	@Override
+	public int getSizeOfList(List<WebElement> ele) {
+		
+		return ele.size();
 	}
 
 	

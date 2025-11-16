@@ -24,7 +24,7 @@ public class TC009_SearchProduct extends TestNGHooks{
 		.verifyAllProducts()
 		.searchProduct(search)
 		.getAllProduct()
-		.selectProduct(search)
+		.clickViewProduct(search)
 		.getCategory()
 		.getPrice()
 		.checkAvailablity()

@@ -23,7 +23,7 @@ public class TC020_SearchProductsAndVerifyCartAfterLogin  extends TestNGHooks{
 		.verifyTitle()
 		.searchProduct(search)
 		.getAllProduct()
-		.selectProduct(search)
+		.clickViewProduct(search)
 		.clickAddToCart()
 		.clickViewCart()
 		.getAllProdutsinCart()

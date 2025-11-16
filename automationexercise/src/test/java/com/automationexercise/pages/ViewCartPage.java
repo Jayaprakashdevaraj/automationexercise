@@ -3,6 +3,7 @@ package com.automationexercise.pages;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import com.automationexercise.hooks.TestNGHooks;
 import com.automationexercise.selenium.api.base.WaitConditions;
@@ -23,6 +24,17 @@ public class ViewCartPage extends TestNGHooks{
 		List<WebElement> allProducts = locateElements(Locators.XPATH, "//table[@id='cart_info_table']/tbody/tr/td[@class='cart_description']/h4/a");
 		for (WebElement ProductList : allProducts) {
 			
+			System.out.println(getElementText(ProductList));
+		}
+		return this;
+	}
+	
+	public ViewCartPage verifyTheProduct(String reqProduct) {
+
+		for (WebElement ProductList : allProducts) {
+			
+			Assert.assertTrue(((List<WebElement>) ProductList).contains(reqProduct), 
+			        "Product '" + reqProduct + "' not found in product list: " );
 			System.out.println(getElementText(ProductList));
 		}
 		return this;

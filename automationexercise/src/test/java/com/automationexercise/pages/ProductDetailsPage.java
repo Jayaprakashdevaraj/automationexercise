@@ -75,6 +75,42 @@ public class ProductDetailsPage extends TestNGHooks{
 		click(continueButton);
 		return this;
 	}
+	
+	public ProductDetailsPage getReviewHeaderName() {
+		WebElement headername = locateElement(Locators.XPATH, "//li[@class='active']/a");
+		Assert.assertTrue(headername.isDisplayed(), "Review Header is not visible");
+		Assert.assertEquals(getElementText(headername), "WRITE YOUR REVIEW","hearder is not matched");
+		return this;
+	}
+	
+	public ProductDetailsPage reviewName(String ReviewerName) {
+		type(locateElement(Locators.ID, "name"), ReviewerName);
+		return this;
+	}
+	
+	public ProductDetailsPage reviewEmail(String ReviewerEmail) {
+		type(locateElement(Locators.ID, "email"), ReviewerEmail);
+		return this;
+	}
+
+	public ProductDetailsPage addReview(String ReviewerInfo) {
+		type(locateElement(Locators.ID, "review"), ReviewerInfo);
+		return this;
+	}
+
+	public ProductDetailsPage getReviewMessageStatus() {
+		String reviewMsg =getElementText(locateElement(Locators.XPATH, "//div[@class='alert-success alert']/span"));
+		Assert.assertEquals(reviewMsg, "Thank you for your review.");
+		return this;
+	}
+	
+	
+
+	public ProductDetailsPage clickSubmitButton() {
+		click(locateElement(Locators.ID, "button-review"));
+		return this;
+	}
+
 	public ViewCartPage clickViewCart() {
 	
 		

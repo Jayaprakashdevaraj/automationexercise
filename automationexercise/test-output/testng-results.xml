@@ -2,41 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-30T20:10:36 IST" name="Suite" finished-at="2025-10-30T20:10:47 IST" duration-ms="11245">
+  <suite started-at="2025-11-15T19:26:25 IST" name="Default suite" finished-at="2025-11-15T19:26:29 IST" duration-ms="4502">
     <groups>
     </groups>
-    <test started-at="2025-10-30T20:10:36 IST" name="Test" finished-at="2025-10-30T20:10:47 IST" duration-ms="11245">
-      <class name="com.automationexercise.tests.TC020_SearchProductsAndVerifyCartAfterLogin">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.automationexercise.tests.TC020_SearchProductsAndVerifyCartAfterLogin@fa4c865]" started-at="2025-10-30T20:10:37 IST" name="beforeMethod" finished-at="2025-10-30T20:10:41 IST" duration-ms="4087" status="PASS">
+    <test started-at="2025-11-15T19:26:25 IST" name="Default test" finished-at="2025-11-15T19:26:29 IST" duration-ms="4502">
+      <class name="com.automationexercise.tests.TC026_VerifyScrollUpWithoutArrowButton">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.automationexercise.tests.TC026_VerifyScrollUpWithoutArrowButton@7a8c8dcf]" started-at="2025-11-15T19:26:25 IST" name="beforeMethod" finished-at="2025-11-15T19:26:29 IST" duration-ms="4021" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="existinguserSignup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.TC020_SearchProductsAndVerifyCartAfterLogin@fa4c865]" started-at="2025-10-30T20:10:41 IST" name="existinguserSignup" data-provider="searchtoaddProductAndLogin" finished-at="2025-10-30T20:10:47 IST" duration-ms="5869" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Little Girls Mr. Panda Shirt]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[jayaprakash1803@gmail.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Jp@180393]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="verifysubscriptionData()[pri:0, instance:com.automationexercise.tests.TC026_VerifyScrollUpWithoutArrowButton@7a8c8dcf]" started-at="2025-11-15T19:26:29 IST" name="verifysubscriptionData" finished-at="2025-11-15T19:26:29 IST" duration-ms="172" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- existinguserSignup -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.automationexercise.tests.TC020_SearchProductsAndVerifyCartAfterLogin@fa4c865]" started-at="2025-10-30T20:10:47 IST" name="afterMethod" finished-at="2025-10-30T20:10:47 IST" duration-ms="205" status="PASS">
+        </test-method> <!-- verifysubscriptionData -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.automationexercise.tests.TC026_VerifyScrollUpWithoutArrowButton@7a8c8dcf]" started-at="2025-11-15T19:26:29 IST" name="afterMethod" finished-at="2025-11-15T19:26:29 IST" duration-ms="261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.automationexercise.tests.TC020_SearchProductsAndVerifyCartAfterLogin -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.automationexercise.tests.TC026_VerifyScrollUpWithoutArrowButton -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -23,7 +23,7 @@ public class TC008_VerifyAllProductsAndProductDetailPage extends TestNGHooks{
 		.clickProduct()
 		.verifyAllProducts()
 		.getAllProduct()
-		.selectProduct(reqProduct)
+		.clickViewProduct(reqProduct)
 		.getProductName(reqProduct)
 		.getCategory()
 		.getPrice()

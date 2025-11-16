@@ -19,7 +19,7 @@ public class TC016_PlaceOrderLoginBeforeCheckout extends TestNGHooks{
 ) {
 		new HomePage().verifyPage()
 		.clickProduct()
-		.selectProduct(firstReqProduct)
+		.clickViewProduct(firstReqProduct)
 		.getProductName(firstReqProduct)
 		.clickAddToCart()
 		.clickViewCart()

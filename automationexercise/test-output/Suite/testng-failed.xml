@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.automationexercise.tests.TC019_ViewCartBrandProducts">
+      <class name="com.automationexercise.tests.TC024_DownloadInvoiceAfterPurchaseOrder">
         <methods>
-          <include name="existinguserSignup" invocation-numbers="0"/>
+          <include name="verifyQuandity" invocation-numbers="0"/>
           <include name="beforeMethod"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.automationexercise.tests.TC019_ViewCartBrandProducts -->
+      </class> <!-- com.automationexercise.tests.TC024_DownloadInvoiceAfterPurchaseOrder -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

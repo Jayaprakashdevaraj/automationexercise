@@ -1,5 +1,8 @@
 package com.automationexercise.selenium.api.design;
 
+import java.util.List;
+
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 
 public interface Element {
@@ -7,6 +10,8 @@ public interface Element {
 	public void click(WebElement ele);
 
 	public void click(WebElement ele, String jsExpression);
+	
+	public void scrollToElement(WebElement ele);
 
 	public void type(WebElement ele, String data);
 
@@ -19,6 +24,8 @@ public interface Element {
 	public void dropdownSelectByVisibleText(WebElement ele, String value);
 
 	public String getElementText(WebElement ele);
+	
+	public int getSizeOfList(List<WebElement> ele);
 
 	public String getAttributeValue(WebElement ele, String value);
 	
